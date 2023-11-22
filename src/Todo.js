@@ -6,9 +6,8 @@ const Todo = ({ todo, toggleTodo }) => {
     toggleTodo(todo.id);
   };
 
-
   return (
-    <div>
+    <div className="list">
         <label>
             <input
               type="checkbox"

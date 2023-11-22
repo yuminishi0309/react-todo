@@ -1,0 +1,60 @@
+.wrapper {
+    width: 80%;
+    max-width: 560px;
+    margin: 56px auto 0;
+}
+.title {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.input {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.add {
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.addSpan {
+    margin-right: 8px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.box {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.deleteSpan {
+    margin-left: 8px;
+    color: rgb(255, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.listArea {
+    padding: 20px;
+    background: rgba(204, 204, 204, 0.5);
+}
+
+/* Todo.js */
+.list {
+    margin: 8px 0;
+}

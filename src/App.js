@@ -1,6 +1,8 @@
 import React,{ useState, useRef } from 'react'
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
+// import "./index.css";
+import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -30,13 +32,21 @@ function App() {
   };
 
   return (
-    <>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <input type="text" ref={todoNameRef} />
-      <button onClick={handleAddTodo}>タスクを追加</button>
-      <button onClick={handleClear}>完了したタスクの削除</button>
-      <div>残りのタスク：{todos.filter((todo) => !todo.completed).length}</div>
-    </>
+    <div className="wrapper">
+      <div className="title">Todo List</div>
+      <div className="input">
+        <input type="text" ref={todoNameRef} />
+        <button className="add" onClick={handleAddTodo}><span className="addSpan">&#0043;</span>タスクを追加</button>
+      </div>
+      <div className="box">
+
+        <div>残りのタスク：{todos.filter((todo) => !todo.completed).length}</div>
+        <button className="delete" onClick={handleClear}>完了したタスクの削除<span className="deleteSpan">&times;</span></button>
+      </div>
+      <div className="listArea">
+        <TodoList todos={todos} toggleTodo={toggleTodo} />
+      </div>
+    </div>
   );
 }
 
